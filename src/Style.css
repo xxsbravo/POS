@@ -1,0 +1,15 @@
+.root {
+    -fx-background-color: #272727;
+    -fx-font-size: 26;
+    -fx-background-radius: 60;
+}
+
+.button {
+    -fx-background-color: linear-gradient(#d7d7d7, #9c9c9c);
+    -fx-background-radius: 30;
+    -fx-font-family: Gotham;
+}
+
+.button:armed{
+    -fx-background-color: #F5F5F5;
+}
