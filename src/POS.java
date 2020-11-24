@@ -7,6 +7,7 @@ import javafx.stage.StageStyle;
 public class POS
 {
     Buttons buttons;
+    Screen screen;
     Stage window;
 
     public POS(Stage window)
@@ -25,9 +26,12 @@ public class POS
         scene.setFill(Color.TRANSPARENT);
 
         buttons = new Buttons();
+        screen = new Screen();
 
         root.setLeft(buttons.initializeNumbers());
         root.setRight(buttons.initializeInputs());
+
+        root.setTop(screen.initializeFunctions());
 
         window.initStyle(StageStyle.TRANSPARENT);
         window.setScene(scene);

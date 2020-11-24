@@ -5,7 +5,6 @@ import javafx.scene.layout.GridPane;
 
 public class Buttons extends Parent
 {
-
     public Buttons()
     {
         initializeNumbers();
@@ -29,7 +28,7 @@ public class Buttons extends Parent
             button[i] = new Button(btnName);
 
             //Forces buttons in array to be set individually to 100x100 Pixels.
-            button[i].setMinSize(60, 60);
+            button[i].setMinSize(55, 55);
         }
 
         //Displays The "0" Button's width to be larger than all the other buttons.
@@ -46,7 +45,7 @@ public class Buttons extends Parent
         grid.add(button[8], 1, 3);
         grid.add(button[9], 2, 3);
 
-        grid.setStyle("-fx-padding: 0 0 80 100");
+        grid.setStyle("-fx-padding: 0 0 60 125");
 
         return grid;
     }
@@ -54,25 +53,25 @@ public class Buttons extends Parent
     GridPane initializeInputs()
     {
         GridPane grid = new GridPane();
-        grid.setVgap(10.75);
+        grid.setVgap(9.75);
         grid.setHgap(10);
         grid.setAlignment(Pos.BOTTOM_RIGHT);
 
         Button[] button = new Button[3];
 
         button[0] = new Button("ESC");
-        button[0].setMinSize(60, 60);
+        button[0].setMinSize(55, 55);
         button[1] = new Button("CLR");
-        button[1].setMinSize(60, 60);
+        button[1].setMinSize(55, 55);
         button[2] = new Button("ENTER ↵");
-        button[2].setMinSize(60, 60);
+        button[2].setMinSize(50, 55);
 
         grid.add(button[0], 0, 1);
         grid.add(button[1], 1, 1);
         button[2].setMaxWidth(Double.MAX_VALUE);
         grid.add(button[2], 0, 15, 2, 1);
 
-        grid.setStyle("-fx-padding: 0 100 80 0");
+        grid.setStyle("-fx-padding: 0 125 60 0");
 
         return grid;
     }
